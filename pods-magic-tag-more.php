@@ -10,17 +10,16 @@
  * License: A "Slug" license name e.g. GPL2
 */
 
-function pods_more_stff_things_more($code = null, $this) {
+function pods_more_stff_things_more($code, $template_name,  $pods) {
 
-	global $post;
 
-	$content = get_post_field( 'post_content', $post->ID );
+	$content = get_post_field( 'post_content', $pods->ID() );
 	$get_extended = get_extended($content);
 	$code = str_replace( '{@post_more}', $get_extended['main'], $code );
 
 	return $code;
 }
-add_filter('pods_templates_pre_template', 'pods_more_stff_things_more', 10, 2);
+add_filter('pods_templates_pre_template', 'pods_more_stff_things_more', 10, 3);
 
 
 
