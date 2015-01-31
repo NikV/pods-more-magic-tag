@@ -12,12 +12,20 @@
 
 function pods_more_stff_things_more($code, $template_name,  $pods) {
 
+	if ( strstr( get_post_field( 'post_content', $pods->ID()), '<!--more-->') ) {
 
-	$content = get_post_field( 'post_content', $pods->ID() );
-	$get_extended = get_extended($content);
-	$code = str_replace( '{@post_more}', $get_extended['main'], $code );
+	$content      = get_post_field( 'post_content', $pods->ID() );
+	$get_extended = get_extended( $content );
+	$code         = str_replace( '{@post_more}', $get_extended['main'], $code );
 
 	return $code;
+
+	}
+
+	else {
+		echo get_the_excerpt();
+	}
+
 }
 add_filter('pods_templates_pre_template', 'pods_more_stff_things_more', 10, 3);
 
