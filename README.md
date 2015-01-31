@@ -23,3 +23,5 @@ Tests
 - Check if More Tag Exists
 - If post does not have <! -- More --> tag, replace with excerpty
 - If no excerpt, return stuff like normal. 
+1. The first test would be if a user enterd the {@post_more} magic tag into a Pods template or between the [pods] shortcode. If the user has enterd the More tag somewhere in the Pods Post Type editor, then return anything that comes before the more tag. If the more tag is not entered, then read test #2
+2. 
