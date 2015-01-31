@@ -15,6 +15,9 @@ Conditionals
 -  If it has a {@excerpt_read_more} tag and the post has the html for read more, replace {@excerpt_read_more} with the right html.
 -  If it has a {@excerpt_read_more} tag and the post does NOT have the html for read more, replace {@excerpt_read_more} with {@post_excerpt}
 -   If it does not have {@excerpt_read_more} do nothing.
+-   (Check if has excerpt)
 
 Tests
-- 
+- Check if More Tag Exists
+- If post does not have <! -- More --> tag, replace with excerpty
+- If no excerpt, return stuff like normal. 
