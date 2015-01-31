@@ -12,6 +12,7 @@ Needed:
 - checking that there are no problems with Pods templates
 
 Conditionals 
+
 The it being the Pods item passing through Pods template method
 -  If it has a {@excerpt_read_more} tag and the post has the html for read more, replace {@excerpt_read_more} with the right html.
 -  If it has a {@excerpt_read_more} tag and the post does NOT have the html for read more, replace {@excerpt_read_more} with {@post_excerpt}
