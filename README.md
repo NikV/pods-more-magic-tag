@@ -6,6 +6,8 @@ This plugin was created to add a magic tag that will display anything before the
 
 Goal: have it work in Pods, Posts, and any page template/Pods template. 
 
+Confirmed in inital phase: Works with both Pods template and [pods] shortcode. No other issues found.
+
 Needed:
 
 - checking that the more tag exists
