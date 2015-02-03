@@ -14,10 +14,10 @@ Needed:
 Conditionals 
 
 The it being the Pods item passing through Pods template method
--  If it has a {@excerpt_read_more} tag and the post has the html for read more, replace {@excerpt_read_more} with the right html.
--  If it has a {@excerpt_read_more} tag and the post does NOT have the html for read more, replace {@excerpt_read_more} with {@post_excerpt}
--   If it does not have {@excerpt_read_more} do nothing.
--   (Check if has excerpt)
+-  If it has a {@excerpt_read_more} tag and the post has the html for read more, replace {@excerpt_read_more} with the right html. - Test #1
+-  If it has a {@excerpt_read_more} tag and the post does NOT have the html for read more, replace {@excerpt_read_more} with {@post_excerpt} - Test #2
+-   If it does not have {@excerpt_read_more} do nothing. - Test #3
+
 
 Tests
 - Check if More Tag Exists
@@ -25,4 +25,5 @@ Tests
 - If no excerpt, return stuff like normal. 
 
 1. The first test would be if a user enterd the {@post_more} magic tag into a Pods template or between the [pods] shortcode. If the user has enterd the More tag somewhere in the Pods Post Type editor, then return anything that comes before the more tag. If the more tag is not entered, then read test #2
-2. Second List item
+2. user still decides to use more tag without more tag, so we have to display the excerpt. If the excerpt is not found, lets go to the next test
+3. No excerpt or more tag found? Then we don't return anything, the Pods post type template will not retrun anything from the magic tag
