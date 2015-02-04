@@ -26,6 +26,6 @@ Tests
 - If post does not have <! -- More --> tag, replace with excerpt
 - If no excerpt, return stuff like normal. 
 
-1. The first test would be if a user enterd the {@post_more} magic tag into a Pods template or between the [pods] shortcode. If the user has enterd the More tag somewhere in the Pods Post Type editor, then return anything that comes before the more tag. If the more tag is not entered, then read test #2. Test Will assert that excerpt more magic tag return anything beofre the more tag in a post.
-2. User still decides to use more tag without more tag, so we have to display the excerpt. If the excerpt is not found, lets go to the next test. Test will assert that wthout the more tag, the magic tag will equal the post excerpt.
+1. The first test would be if a user enterd the {@post_more} magic tag into a Pods template or between the [pods] shortcode. If the user has enterd the More tag somewhere in the Pods Post Type editor, then return anything that comes before the more tag. If the more tag is not entered, then read test #2. Test Will assert that template returns content that comes before the more tag in a post.
+2. User still decides to use more tag without more tag, so we have to display the excerpt. If the excerpt is not found, lets go to the next test. Test will assert that wthout the more tag, the pods template should output the post excerpt.
 3. No excerpt or more tag found? Then we don't return anything, the Pods post type template will not return anything from the magic tag. Test will assert that the result of the template was equal to the normal content as it was shown before. (Making sure not to mess with any other magic tags within the Pods Template.
