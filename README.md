@@ -31,8 +31,7 @@ Tests
 3. No excerpt or more tag found? Then we don't return anything, the Pods post type template will not return anything from the magic tag. Test will assert that the result of the template was equal to the normal content as it was shown before. (Making sure not to mess with any other magic tags within the Pods Template.
 
 Templates
+
 1. (What returns from Test #1) lorem {@excerpt_read_more} impsum {@custom_field}, should not break any of the other things rendered in a template like the custom field
-
 2. (What returns from test #2) lorem {@post_excerpt} impsum {@custom_field}, should not break anything else rendered in the template
-
 3. (What returns from test #3) lorem impsum {@custom_field}, should not break anything else rendered in the template
