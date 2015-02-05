@@ -38,6 +38,15 @@ Templates
 
 Posts
 
-1. Post Content: lorum ipsum, more tag, more content, custom field returns "custom". Post Excerpt: Excerpt
-2. Post content: lorum ipsum more content, custom field returns "custom". Post Excerpt: Excerpt
-3. Post content: orum ipsum more content, custom field returns "custom". No excerpt
+1.
+-Post Content: lorum ipsum, more tag more content, 
+-custom field returns "custom". 
+-Post Excerpt: Excerpt
+2. 
+ -Post content: lorum ipsum more content, 
+ -custom fild returns "custom". 
+ -Post Excerpt: Excerpt
+3. 
+-Post content: lorum ipsum more content, 
+-custom field returns "custom". 
+-No excerpt
