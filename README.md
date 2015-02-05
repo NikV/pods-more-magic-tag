@@ -38,20 +38,20 @@ Templates
 
 Posts
 
-1.
+Post 1
 
--Post Content: lorum ipsum,<!-- more --> more content, 
--custom field returns "custom". 
--Post Excerpt: Excerpt
+Post Content: lorum ipsum,<!-- more --> more content, 
+custom field returns "custom". 
+post Excerpt: Excerpt
 
-2. 
+Post 2
 
- -Post content: lorum ipsum more content, 
- -custom fild returns "custom". 
- -Post Excerpt: Excerpt
+Post content: lorum ipsum more content, 
+custom fild returns "custom". 
+Post Excerpt: Excerpt
 
-3. 
+Post 3
 
--Post content: lorum ipsum more content, 
--custom field returns "custom". 
--No excerpt
+Post content: lorum ipsum more content, 
+custom field returns "custom". 
+No excerpt
