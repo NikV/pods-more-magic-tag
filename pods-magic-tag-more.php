@@ -29,7 +29,7 @@ function pods_post_more_magic_tag($code, $template_name,  $pods) {
 			return $code;
 
 		} elseif ( ! strstr( get_post_field( 'post_content', $pods->ID() ), '<!--more-->' ) ) {
-			return get_post_field( 'post_excerpt', $pods->ID() );
+			return get_post_field( 'post_excerpt', $pods->ID() ); // If no post excerpt, nothing returns
 		}
 
 
