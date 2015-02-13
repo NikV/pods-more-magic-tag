@@ -19,19 +19,20 @@
 function pods_post_more_magic_tag($code, $template_name,  $pods) {
 
 
-		//Will only run if the more tag exists
+	//Will only run if the more tag exists
 
-			$content      = get_post_field( 'post_content', $pods->ID() );
-			$get_extended = get_extended( $content );//get_extended() will get content before the more tag
+	$content      = get_post_field( 'post_content', $pods->ID() );
+	$get_extended = get_extended( $content );//get_extended() will get content before the more tag
+
 	if ( strstr( get_post_field( 'post_content', $pods->ID() ), '<!--more-->' ) ) {
 
 		$code = str_replace( '{@excerpt_read_more}', $get_extended['main'], $code );
 		return $code;
 
+	}
 
-		} else {
+	else {
 		return $code;
-
 	}
 
 
