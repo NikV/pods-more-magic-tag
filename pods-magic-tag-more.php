@@ -1,12 +1,11 @@
 <?php
 /**
  * Plugin Name: Pods Magic Tag More
- * Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
- * Description: A brief description of the Plugin.
+ * Description: 
  * Version: 1.0
- * Author: nikhil
- * Author URI: http://URI_Of_The_Plugin_Author
- * License: A "Slug" license name e.g. GPL2
+ * Author: Nikhil Vimal
+ * Author URI: nik.techvoltz.com
+ * License: GPL2
 */
 
 /**
@@ -15,6 +14,7 @@
  * @param $code
  * @param $template_name
  * @param $pods
+ * 
  * @return mixed|string
  */
 function pods_post_more_magic_tag($code, $template_name,  $pods) {
