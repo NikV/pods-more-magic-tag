@@ -1,12 +1,12 @@
 <?php
-
 /**
  * Plugin Name: Pods Magic Tag More
+ * Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
  * Description: A brief description of the Plugin.
  * Version: 1.0
- * Author: Nikhil Vimal
- * Author URI: nik.techvoltz.com
- * License: GPL2
+ * Author: nikhil
+ * Author URI: http://URI_Of_The_Plugin_Author
+ * License: A "Slug" license name e.g. GPL2
 */
 
 /**
@@ -15,24 +15,25 @@
  * @param $code
  * @param $template_name
  * @param $pods
+ * @return mixed|string
  */
 function pods_post_more_magic_tag($code, $template_name,  $pods) {
-	//Will only run if the more tag exists
-	if ( strstr( get_post_field( 'post_content', $pods->ID() ), '<!--more-->' ) ) {
-		
-	$content      = get_post_field( 'post_content', $pods->ID() );
-	$get_extended = get_extended( $content );//get_extended() will get content before the more tag
-	$code = str_replace( '{@excerpt_read_more}', $get_extended['main'], $code );
-	
-	return $code;
+	if( 'post_type' == $pods->pod_data[ 'type' ] ) {
+		//Will only run if the more tag exists
+		if ( strstr( get_post_field( 'post_content', $pods->ID() ), '<!--more-->' ) ) {
 
+			$content      = get_post_field( 'post_content', $pods->ID() );
+			$get_extended = get_extended( $content );//get_extended() will get content before the more tag
+			$code         = str_replace( '{@excerpt_read_more}', $get_extended['main'], $code );
+
+			return $code;
+
+		} else {
+			$code = str_replace( '{@excerpt_read_more}', get_post_field( 'post_excerpt', $pods->ID() ), $code );
+
+			return $code;
+		}
 	}
-
-	else {
-		$code = str_replace( '{@excerpt_read_more}', get_post_field( 'post_excerpt', $pods->ID() ), $code );
-		return $code;
-	}
-
 
 
 }
