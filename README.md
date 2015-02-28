@@ -1,5 +1,7 @@
 # The Pods <!-- more --> Magic Tag
 
+Currently in process of unit testing, then we begin merging into Pods core.
+
 Scope: 
 
 This plugin was created to add a magic tag that will display anything before the more tag if it exists within a post.
